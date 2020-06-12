@@ -95,6 +95,7 @@ extern int sys_link(void);
 extern int sys_mkdir(void);
 extern int sys_mknod(void);
 extern int sys_open(void);
+extern int sys_lseek(void);
 extern int sys_pipe(void);
 extern int sys_read(void);
 extern int sys_sbrk(void);
@@ -126,6 +127,7 @@ static int (*syscalls[])(void) = {
 [SYS_link]    sys_link,
 [SYS_mkdir]   sys_mkdir,
 [SYS_close]   sys_close,
+[SYS_lseek]   sys_lseek,
 };
 
 void
